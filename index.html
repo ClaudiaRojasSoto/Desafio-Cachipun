@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="">
+    <!-- Estilos propios en css-->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Cachipún</title>
+
+</head>
+
+<body>
+<!-- Título del juego -->
+    <div>
+        <h1>Cachipún</h1>
+    </div>
+
+    <!-- Botón para volver a jugar -->
+    <div style="width: 200px;margin: auto;">
+        <button id="btnNuevo" style="display: none;" onclick="nuevoJuego()">Volver a jugar</button>
+    </div>
+
+    <!-- Contenedor con los botones y la selección de jugadas inicial -->
+    <div id="contenedorInicial">
+        <label for="rondas">Indique cuantas rondas desea jugar:</label>
+        <input type="number" name="" id="rondas" min="1" value="1">
+        <button id="btnComenzar" onclick="comenzar()">Comenzar</button>
+    </div>
+
+    <!-- Contenedor de las imagenes del juego: piedra, papel y tijera -->
+    <div id="contenedorJuego" style="display: none;">
+        <!-- Al evento on click se llama a la función jugar -->
+        <div style="width: 200px;margin: auto; display: flex; justify-content: center;">
+            <img id="foto1" src="assets/img/piedra.png" alt="Imagen de piedra" style="width: 200px;" onclick="jugar(0)">
+            <img id="foto2" src="assets/img/papel.png" alt="Imagen de papel" style="width: 200px;" onclick="jugar(1)">
+            <img id="foto3" src="assets/img/tijeras.png" alt="iImagen de tijeras" style="width: 200px;"onclick="jugar(2)">
+        </div>
+
+<!-- Titulares que marcan la selección del usuario, del pc, los resultados obtendios (ganador, perdedor o empate desde el usuario) y las jugadas restantes -->
+        <h2>Selección Usuario:</h2>
+        <h2 id="usuario"></h2>
+
+        <h2>Selección PC:</h2>
+        <h2 id="pc"></h2>
+
+        <h2>El resultado es:</h2>
+        <h2 id="resultado"></h2>
+
+        <h3>Número de jugadas restantes:</h3>
+        <h3 id="jugadasrestantes"></h3>
+
+
+    </div>
+
+
+<!-- scripts propios -->
+    <script src="assets/js/scripts.js"></script>
+</body>
+
+</html>
